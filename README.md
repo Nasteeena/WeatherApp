@@ -2,7 +2,7 @@
 
 <a href='https://6538afb374b30b63a783e602--celadon-dango-640a3d.netlify.app/'>Weather App Demo</a>
 
-![image](/WeatherApp//src/img//gif.gif)
+![image](src/img//gif.gif)
 
 This app is used for showing the Weather Forecast based on the found city.
 
