@@ -31,7 +31,7 @@ let currentCity = storage.getCurrentCity();
 if(currentCity !== undefined) {
     NOWBLOCKEL.CITY.textContent = currentCity;
 } else {
-    NOWBLOCKEL.CITY.textContent = 'Found city';
+    NOWBLOCKEL.CITY.textContent = 'Moscow';
 }
 
 export {listArr, currentCity, storage};

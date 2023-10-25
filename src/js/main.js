@@ -6,16 +6,20 @@ import {
     NOWBLOCKEL, 
     FORECASTBLOCKEL, 
     divList, 
+    EMPTY
 } from '../modules/variables.js';
 import {storage, listArr} from '../modules/local.js';
 import { renderData, renderDetails } from '../modules/renderData.js';
 import {addToarr, toggleLike} from '../modules/addDelete.js';
 import createForecastEl from '../modules/createEl.js';
+import { currentCity } from '../modules/local.js';
 
 showList();
+getRequest(serverUrl, currentCity || 'Moscow');
+getForecastRequest(forecastUrl, currentCity || 'Moscow');
 
 function showList() {
-    divList.innerHTML = '';
+    divList.innerHTML = EMPTY.STRING;
     listArr.forEach((item)=> {
         createCityEl(item);
     });
@@ -35,7 +39,7 @@ function formHandler() {
     toggleLike(FORMELEMENTS.CITY_INPUT.value);
     getRequest(serverUrl, FORMELEMENTS.CITY_INPUT.value);
     getForecastRequest(forecastUrl, FORMELEMENTS.CITY_INPUT.value);
-    FORMELEMENTS.CITY_INPUT.value = '';
+    FORMELEMENTS.CITY_INPUT.value = EMPTY.STRING;
 }
 
 function heartHandler() {
@@ -67,7 +71,7 @@ function getForecastRequest(link, cityName) {
         let list = result.list;
         let spliceList = list.splice(0, 5);
         FORECASTBLOCKEL.CITY.textContent = result.city.name;
-        FORECASTBLOCKEL.BLOCK.innerHTML = '';
+        FORECASTBLOCKEL.BLOCK.innerHTML = EMPTY.STRING;
         spliceList.forEach(function(item) {
             createForecastEl(item);
         });

@@ -3,6 +3,11 @@ const TABS = {
     ALL_TABS: document.querySelectorAll('.tabs_block'),
 };
 
+const EMPTY = {
+    STRING: '',
+    ARRAY: []
+}
+
 const FORMELEMENTS = {
     MAIN_FORM: document.querySelector('.main-form'),
     CITY_INPUT: document.querySelector('.city-input'),
@@ -52,4 +57,15 @@ TABS.ALL_BTN.forEach(function(item) {
     });
 });
 
-export {TABS, FORMELEMENTS, serverUrl, apiKey, forecastUrl, NOWBLOCKEL, DETAILSBLOCK, FORECASTBLOCKEL, divList};
+export {
+    TABS, 
+    FORMELEMENTS,
+    serverUrl, 
+    apiKey, 
+    forecastUrl, 
+    NOWBLOCKEL, 
+    DETAILSBLOCK, 
+    FORECASTBLOCKEL, 
+    divList,
+    EMPTY
+};
