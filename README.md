@@ -1,8 +1,8 @@
 # WeatherApp on Vanilla JS
 
-<a href='https://653796383bd3db0f5834cc99--papaya-hamster-6e62d8.netlify.app/'>Weather App Demo</a>
+<a href='https://6538afb374b30b63a783e602--celadon-dango-640a3d.netlify.app/'>Weather App Demo</a>
 
-<img src='ezgif.com-video-to-gif.gif'/>
+![image](/WeatherApp//src/img//gif.gif)
 
 This app is used for showing the Weather Forecast based on the found city.
 
